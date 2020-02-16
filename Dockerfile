@@ -21,6 +21,6 @@ VOLUME /var/log/redis
 EXPOSE 6379
 
 # start
-#ADD start.sh /usr/local/bin
-#RUN chmod +x /usr/local/bin/start.sh
-ENTRYPOINT [ "tail","-f","/dev/null"]
+ADD start.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/start.sh
+ENTRYPOINT [ "/usr/local/bin/start.sh"]
