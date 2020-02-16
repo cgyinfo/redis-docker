@@ -1,5 +1,5 @@
 #!/bin/bash
 
-service redis restart
+service redis-server restart
 
 tail -f /dev/null
