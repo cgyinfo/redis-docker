@@ -9,10 +9,10 @@ ADD sources.list /etc/apt
 RUN apt-get clean && apt-get update && apt-get install redis -y
 
 # modify config file
-RUN sed -i -e 's@bind 127.0.0.1@bind 0.0.0.0@g' /etc/redis/redis.conf
+RUN sed -i 's@bind 127.0.0.1@bind 0.0.0.0@g' /etc/redis/redis.conf
 
 # close protected-mode
-RUN sed -i -e 's@protected-mode yes@protected-mode no@g' /etc/redis/redis.conf
+RUN sed -i 's@protected-mode yes@protected-mode no@g' /etc/redis/redis.conf
 
 # set password
 RUN echo "requirepass 123456" >> /etc/redis/redis.conf
