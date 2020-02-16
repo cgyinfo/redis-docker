@@ -17,7 +17,6 @@ RUN sed -i 's@protected-mode yes@protected-mode no@g' /etc/redis/redis.conf
 # set password
 RUN echo "requirepass 123456" >> /etc/redis/redis.conf
 
-VOLUME /var/lib/redis
 VOLUME /var/log/redis
 EXPOSE 6379
 
