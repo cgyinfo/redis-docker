@@ -6,7 +6,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 COPY sources.list /etc/apt
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# set apt-get sources
+# set apt-get sources and install the necessary softwares
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends redis
 
 # modify config file bind address, protected mode and password
