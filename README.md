@@ -1,17 +1,17 @@
 # CGYINFO: Redis Docker Image
 
 ## Statement
-redis docker image based ubuntu 18.04
+redis 4.0.9 docker image based ubuntu 18.04
 
 ## Usage
 
 ```
-docker run -d --name redis -v /d/RES/redis/data:/var/lib/redis -v /d/RES/redis/logs:/var/log/redis -p 6379:6379 cgyinfo/redis
+docker run -d --name redis -v /d/RES/redis/data:/var/lib/redis -v /d/RES/redis/logs:/var/log/redis -e REDIS_PASSWORD=123456 -p 6379:6379 cgyinfo/redis
 ```
 
 The image applys two VOLUMES be mounted by container:
-/var/lib/redis : redis data storage
-/var/log/redis : redis server log file
+/var/lib/redis : redis storage data
+/var/log/redis : redis server logs
 
 ## Epilogue
 
