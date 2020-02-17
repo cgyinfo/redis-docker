@@ -14,4 +14,3 @@ docker run -d --name redis -v /d/RES/redis/data:/var/lib/redis -v /d/RES/redis/l
 ![LOGO](https://www.cgyinfo.com/logo.png)
 
 Please refer to the official website for details: [https://www.cgyinfo.com](https://www.cgyinfo.com)
-
